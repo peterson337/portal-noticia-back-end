@@ -12,7 +12,7 @@ var session = require('express-session')
 
 var mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
-mongoose.connect(`${process.env.KEY}`,{useNewUrlParser: true, UseUnifiedTopology: true}).then(() => {
+mongoose.connect(`mongodb+srv://${process.env.KEY}`,{useNewUrlParser: true, UseUnifiedTopology: true}).then(() => {
     console.log('Connected to MongoDB');
 }).catch((err) => {
     console.log(err.message);
